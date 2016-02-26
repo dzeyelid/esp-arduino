@@ -35,11 +35,6 @@ void sendData(String payload) {
     }
   }
   String line = client.readStringUntil('\n');
-  if (line.startsWith("{\"state\":\"success\"")) {
-    Serial.println("esp8266/Arduino CI successfull!");
-  } else {
-    Serial.println("esp8266/Arduino CI has failed");
-  }
   Serial.println("reply was:");
   Serial.println("==========");
   Serial.println(line);
